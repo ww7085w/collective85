@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1060" font-family="'Georgia', 'Times New Roman', serif">
+  <defs>
+    <style>
+      .room-rented { fill: #E8EDE9; stroke: #4A5D4F; stroke-width: 1.5; }
+      .room-kitchen { fill: #D6E2D8; stroke: #4A5D4F; stroke-width: 2; }
+      .room-available { fill: #FFF8F0; stroke: #D4C9B0; stroke-width: 1.5; stroke-dasharray: 6,3; }
+      .room-bathroom { fill: #E8E4DC; stroke: #B0A898; stroke-width: 1.2; }
+      .room-hallway { fill: #F5F3EE; stroke: #C4BBA8; stroke-width: 1; }
+      .room-mech { fill: #F2E8C9; stroke: #B8A870; stroke-width: 1.5; }
+      .unit-label { font-size: 10px; fill: #8BA58E; font-family: 'Helvetica', 'Arial', sans-serif; letter-spacing: 1.5px; font-weight: 600; }
+      .biz-name { font-size: 13px; fill: #2B3530; font-weight: 700; }
+      .biz-name-sm { font-size: 11.5px; fill: #2B3530; font-weight: 700; }
+      .room-size { font-size: 8.5px; fill: #8B8B8B; font-family: 'Helvetica', 'Arial', sans-serif; }
+      .available-text { font-size: 13px; fill: #C4896E; font-weight: 700; font-style: italic; }
+      .available-sub { font-size: 8px; fill: #B0A090; font-family: 'Helvetica', 'Arial', sans-serif; letter-spacing: 0.5px; }
+      .bathroom-text { font-size: 10px; fill: #8B8B8B; font-family: 'Helvetica', 'Arial', sans-serif; }
+      .hallway-text { font-size: 10px; fill: #A0A0A0; font-family: 'Helvetica', 'Arial', sans-serif; letter-spacing: 2px; }
+      .mech-text { font-size: 9px; fill: #8B8B8B; font-family: 'Helvetica', 'Arial', sans-serif; }
+      .title-text { font-size: 28px; fill: #2B3530; font-weight: 700; }
+      .title-accent { font-size: 28px; fill: #8BA58E; font-weight: 700; }
+      .subtitle-text { font-size: 11px; fill: #8B8B8B; font-family: 'Helvetica', 'Arial', sans-serif; letter-spacing: 2px; }
+      .plumbing-dot { fill: #7BA3C9; }
+      .legend-text { font-size: 9.5px; fill: #6B6B6B; font-family: 'Helvetica', 'Arial', sans-serif; }
+      .legend-label { font-size: 10px; fill: #4A5D4F; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 600; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4A5D4F"/>
+    </marker>
+    <!-- Car shape for parking -->
+    <symbol id="car" viewBox="0 0 40 20">
+      <rect x="2" y="4" width="36" height="14" rx="4" fill="#C4BBA8" opacity="0.5"/>
+      <rect x="6" y="6" width="10" height="6" rx="2" fill="#B0A898" opacity="0.4"/>
+      <rect x="22" y="6" width="10" height="6" rx="2" fill="#B0A898" opacity="0.4"/>
+      <circle cx="10" cy="18" r="2.5" fill="#999" opacity="0.4"/>
+      <circle cx="30" cy="18" r="2.5" fill="#999" opacity="0.4"/>
+    </symbol>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1060" fill="#FAFAF5"/>
+
+  <!-- Title -->
+  <text x="600" y="45" text-anchor="middle">
+    <tspan class="title-text">Collective </tspan><tspan class="title-accent">85</tspan><tspan class="title-text" style="font-size: 20px;">  Floor Plan</tspan>
+  </text>
+
+  <!-- ============ 85TH STREET (NORTH) ============ -->
+  <!-- Road surface -->
+  <rect x="100" y="75" width="1000" height="65" rx="4" fill="#D5D0C8"/>
+  <!-- Road lines -->
+  <line x1="130" y1="107" x2="1070" y2="107" stroke="#F0EDE4" stroke-width="2" stroke-dasharray="20,12"/>
+  <!-- Sidewalk/curb top -->
+  <rect x="100" y="71" width="1000" height="5" rx="2" fill="#C4BBA8"/>
+  <!-- Sidewalk/curb bottom -->
+  <rect x="100" y="138" width="1000" height="5" rx="2" fill="#C4BBA8"/>
+  <!-- Street label -->
+  <text x="600" y="103" text-anchor="middle" style="font-size: 14px; fill: #7A7568; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 700; letter-spacing: 4px;">85TH STREET</text>
+  <!-- Traffic note on the street -->
+  <text x="600" y="118" text-anchor="middle" style="font-size: 8px; fill: #8A8578; font-family: 'Helvetica', sans-serif; letter-spacing: 1px;">35,000+ CARS DAILY</text>
+  <!-- Direction arrows on road -->
+  <text x="200" y="96" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: 'Helvetica', sans-serif;">→</text>
+  <text x="350" y="96" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: 'Helvetica', sans-serif;">→</text>
+  <text x="850" y="130" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: 'Helvetica', sans-serif;">←</text>
+  <text x="1000" y="130" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: 'Helvetica', sans-serif;">←</text>
+
+  <!-- ============ BUILDING ============ -->
+  <!-- Shifted down by 100 to make room for street. Building starts at y=195 -->
+
+  <!-- NORTH ENTRANCE (between Suite 107 and Laundry Room) -->
+  <text x="435" y="155" text-anchor="middle" style="font-size: 10px; fill: #4A5D4F; font-family: 'Helvetica', sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
+  <line x1="435" y1="162" x2="435" y2="190" stroke="#4A5D4F" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Outer building border -->
+  <rect x="215" y="195" width="770" height="625" rx="6" fill="none" stroke="#4A5D4F" stroke-width="2.5" opacity="0.25"/>
+
+  <!-- UNIFIED HALLWAY (single L-shaped path, no internal seams) -->
+  <path d="M410,195 L460,195 L460,657 L760,657 L760,816 L655,816 L655,700 L410,700 Z" fill="#F5F3EE" stroke="#C4BBA8" stroke-width="1" opacity="0.6"/>
+  <text x="435" y="460" text-anchor="middle" transform="rotate(-90, 435, 460)" class="hallway-text" style="letter-spacing: 4px;">H A L L W A Y</text>
+
+  <!-- Unit 107 -->
+  <rect x="220" y="200" width="185" height="120" rx="5" class="room-rented"/>
+  <circle cx="393" cy="212" r="3.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="312" y="228" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 107</text>
+  <text x="312" y="250" text-anchor="middle" class="biz-name-sm">Pure Sugar</text>
+  <text x="312" y="265" text-anchor="middle" class="biz-name-sm">Aesthetics</text>
+  <text x="312" y="310" text-anchor="middle" class="room-size">117 SF</text>
+
+  <!-- Unit 106 -->
+  <rect x="220" y="325" width="185" height="120" rx="5" class="room-available"/>
+  <circle cx="393" cy="337" r="3.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="312" y="360" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 106</text>
+  <text x="312" y="382" text-anchor="middle" class="available-text">Available</text>
+  <text x="312" y="396" text-anchor="middle" class="available-sub">INQUIRE FOR DETAILS</text>
+  <text x="312" y="435" text-anchor="middle" class="room-size">115 SF</text>
+
+  <!-- Unit 105 -->
+  <rect x="220" y="450" width="185" height="120" rx="5" class="room-available"/>
+  <circle cx="393" cy="462" r="3.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="312" y="485" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 105</text>
+  <text x="312" y="507" text-anchor="middle" class="available-text">Available</text>
+  <text x="312" y="521" text-anchor="middle" class="available-sub">INQUIRE FOR DETAILS</text>
+  <text x="312" y="560" text-anchor="middle" class="room-size">115 SF</text>
+
+  <!-- Unit 104 -->
+  <rect x="220" y="575" width="185" height="120" rx="5" class="room-available"/>
+  <circle cx="393" cy="587" r="3.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="312" y="610" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 104</text>
+  <text x="312" y="632" text-anchor="middle" class="available-text">Available</text>
+  <text x="312" y="646" text-anchor="middle" class="available-sub">INQUIRE FOR DETAILS</text>
+  <text x="312" y="685" text-anchor="middle" class="room-size">115 SF</text>
+
+  <!-- Laundry Room -->
+  <rect x="465" y="200" width="185" height="84" rx="5" class="room-mech"/>
+  <text x="557" y="240" text-anchor="middle" class="mech-text" style="font-size: 12px; font-weight: 600;">🧺  Laundry Room</text>
+
+  <!-- Unit 108 -->
+  <rect x="465" y="290" width="185" height="125" rx="5" class="room-rented"/>
+  <circle cx="638" cy="302" r="3.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="557" y="320" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 108</text>
+  <text x="557" y="342" text-anchor="middle" class="biz-name-sm">Xinya Beauty</text>
+  <text x="557" y="357" text-anchor="middle" class="biz-name-sm">Boutique</text>
+  <text x="557" y="405" text-anchor="middle" class="room-size">115 SF</text>
+
+  <!-- Unit 109 -->
+  <rect x="465" y="421" width="185" height="125" rx="5" class="room-available"/>
+  <circle cx="638" cy="433" r="3.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="557" y="458" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 109</text>
+  <text x="557" y="480" text-anchor="middle" class="available-text">Available</text>
+  <text x="557" y="494" text-anchor="middle" class="available-sub">INQUIRE FOR DETAILS</text>
+  <text x="557" y="536" text-anchor="middle" class="room-size">115 SF</text>
+
+  <!-- Bathroom 1 -->
+  <rect x="465" y="552" width="90" height="105" rx="5" class="room-bathroom"/>
+  <text x="510" y="600" text-anchor="middle" class="bathroom-text">🚺</text>
+  <text x="510" y="616" text-anchor="middle" style="font-size: 8px; fill: #8B8B8B; font-family: 'Helvetica', sans-serif;">Restroom</text>
+
+  <!-- Bathroom 2 -->
+  <rect x="560" y="552" width="90" height="105" rx="5" class="room-bathroom"/>
+  <text x="605" y="600" text-anchor="middle" class="bathroom-text">🚹</text>
+  <text x="605" y="616" text-anchor="middle" style="font-size: 8px; fill: #8B8B8B; font-family: 'Helvetica', sans-serif;">Restroom</text>
+
+  <!-- Unit 103 -->
+  <rect x="220" y="700" width="240" height="116" rx="5" class="room-rented"/>
+  <circle cx="448" cy="712" r="3.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="340" y="730" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 103</text>
+  <text x="340" y="755" text-anchor="middle" class="biz-name-sm">Kissed by Color Salon</text>
+  <text x="340" y="805" text-anchor="middle" class="room-size">150 SF</text>
+
+  <!-- Unit 102 -->
+  <rect x="465" y="700" width="185" height="116" rx="5" class="room-available"/>
+  <circle cx="638" cy="712" r="3.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="557" y="733" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 102</text>
+  <text x="557" y="755" text-anchor="middle" class="available-text">Available</text>
+  <text x="557" y="769" text-anchor="middle" class="available-sub">INQUIRE FOR DETAILS</text>
+  <text x="557" y="805" text-anchor="middle" class="room-size">112.5 SF</text>
+
+  <!-- Unit 110 -->
+  <rect x="655" y="200" width="325" height="453" rx="6" class="room-rented"/>
+  <text x="817" y="280" text-anchor="middle" class="unit-label" style="font-size: 14px;">SUITE 110</text>
+  <text x="817" y="330" text-anchor="middle" style="font-size: 20px; fill: #2B3530; font-weight: 700;">World in a Dish</text>
+  <text x="817" y="355" text-anchor="middle" style="font-size: 12px; fill: #4A5D4F; font-style: italic;">Community Kitchen</text>
+  <text x="817" y="445" text-anchor="middle" style="font-size: 36px; opacity: 0.1;">🍽️</text>
+  <text x="817" y="635" text-anchor="middle" class="room-size">670 SF</text>
+
+  <!-- Unit 101 -->
+  <rect x="765" y="661" width="215" height="155" rx="5" class="room-available"/>
+  <text x="872" y="700" text-anchor="middle" class="unit-label" style="font-size: 12px;">SUITE 101</text>
+  <text x="872" y="724" text-anchor="middle" class="biz-name">The Think Tank</text>
+  <text x="872" y="740" text-anchor="middle" style="font-size: 10px; fill: #4A5D4F; font-style: italic;">Shared Office Space</text>
+  <text x="872" y="762" text-anchor="middle" class="available-text">Available</text>
+  <text x="872" y="800" text-anchor="middle" class="room-size">157 SF</text>
+
+  <!-- ENTRANCE -->
+  <line x1="707" y1="845" x2="707" y2="825" stroke="#4A5D4F" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="707" y="858" text-anchor="middle" style="font-size: 10px; fill: #4A5D4F; font-family: 'Helvetica', sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
+
+  <!-- ============ PARKING LOT (SOUTH) ============ -->
+  <rect x="160" y="870" width="880" height="70" rx="8" fill="#E4E0D8" stroke="#C4BBA8" stroke-width="1"/>
+  <!-- Parking label -->
+  <text x="600" y="905" text-anchor="middle" style="font-size: 13px; fill: #7A7568; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 700; letter-spacing: 3px;">🅿️  ON-SITE PARKING</text>
+  <text x="600" y="922" text-anchor="middle" style="font-size: 9px; fill: #A09888; font-family: 'Helvetica', sans-serif; letter-spacing: 1px;">AMPLE PARKING FOR TENANTS &amp; CLIENTS</text>
+
+  <!-- Parking spaces (open lot) -->
+
+  <!-- Parking spaces (empty) -->
+
+  <!-- COMPASS -->
+  <g transform="translate(1060, 230)">
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#C4BBA8" stroke-width="1.5"/>
+    <text x="0" y="-40" text-anchor="middle" style="font-size: 14px; fill: #4A5D4F; font-family: 'Helvetica', sans-serif; font-weight: 700;">N</text>
+    <line x1="0" y1="-26" x2="0" y2="-10" stroke="#4A5D4F" stroke-width="2"/>
+    <polygon points="0,-26 -5,-14 5,-14" fill="#4A5D4F"/>
+    <text x="0" y="26" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: 'Helvetica', sans-serif;">S</text>
+    <text x="26" y="5" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: 'Helvetica', sans-serif;">E</text>
+    <text x="-26" y="5" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: 'Helvetica', sans-serif;">W</text>
+  </g>
+
+  <!-- LEGEND (centered) -->
+  <rect x="160" y="955" width="880" height="40" rx="6" fill="#F0EDE4" opacity="0.5"/>
+  <rect x="270" y="966" width="14" height="14" rx="3" class="room-rented"/>
+  <text x="290" y="977" class="legend-label">Occupied</text>
+  <rect x="370" y="966" width="14" height="14" rx="3" class="room-available"/>
+  <text x="390" y="977" class="legend-label">Available</text>
+  <circle cx="487" cy="973" r="4.5" class="plumbing-dot" opacity="0.6"/>
+  <text x="498" y="977" class="legend-label">Individual Plumbing Rough-in</text>
+  <rect x="680" y="966" width="14" height="14" rx="3" class="room-mech"/>
+  <text x="700" y="977" class="legend-label">Laundry</text>
+  <rect x="770" y="966" width="14" height="14" rx="3" class="room-bathroom"/>
+  <text x="790" y="977" class="legend-label">Restrooms</text>
+
+</svg>
