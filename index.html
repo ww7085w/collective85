@@ -1002,19 +1002,25 @@
 
     /* Floor plan SVG mobile */
     .floorplan-visual {
-      padding: 16px;
+      padding: 8px;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      display: flex;
+      justify-content: center;
     }
 
     .floorplan-visual svg {
-      min-width: 500px;
-      margin: 0 auto;
-      display: block;
+      min-width: 480px;
+      max-width: 100%;
+      flex-shrink: 0;
     }
 
     .floorplan-inner {
       padding: 0;
+    }
+
+    .floorplan {
+      padding: 48px 12px;
     }
 
     /* Bigger touch targets */
@@ -1121,20 +1127,20 @@
       .fp-room-bathroom { fill: #E8E4DC; stroke: #B0A898; stroke-width: 1.2; }
       .fp-room-hallway { fill: #F5F3EE; stroke: #C4BBA8; stroke-width: 1; }
       .fp-room-mech { fill: #F2E8C9; stroke: #B8A870; stroke-width: 1.5; }
-      .fp-unit-label { font-size: 10px; fill: #006666; font-family: 'Helvetica', 'Arial', sans-serif; letter-spacing: 1.5px; font-weight: 600; }
+      .fp-unit-label { font-size: 10px; fill: #006666; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1.5px; font-weight: 600; }
       .fp-biz-name { font-size: 13px; fill: #09405e; font-weight: 700; }
       .fp-biz-name-sm { font-size: 11.5px; fill: #09405e; font-weight: 700; }
-      .fp-room-size { font-size: 8.5px; fill: #8B8B8B; font-family: 'Helvetica', 'Arial', sans-serif; }
+      .fp-room-size { font-size: 8.5px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
       .fp-available-text { font-size: 13px; fill: #D4850E; font-weight: 700; font-style: italic; }
-      .fp-available-sub { font-size: 8px; fill: #B0A090; font-family: 'Helvetica', 'Arial', sans-serif; letter-spacing: 0.5px; }
-      .fp-bathroom-text { font-size: 10px; fill: #8B8B8B; font-family: 'Helvetica', 'Arial', sans-serif; }
-      .fp-hallway-text { font-size: 10px; fill: #A0A0A0; font-family: 'Helvetica', 'Arial', sans-serif; letter-spacing: 2px; }
-      .fp-mech-text { font-size: 9px; fill: #8B8B8B; font-family: 'Helvetica', 'Arial', sans-serif; }
+      .fp-available-sub { font-size: 8px; fill: #B0A090; font-family: Helvetica, Arial, sans-serif; letter-spacing: 0.5px; }
+      .fp-bathroom-text { font-size: 10px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
+      .fp-hallway-text { font-size: 10px; fill: #A0A0A0; font-family: Helvetica, Arial, sans-serif; letter-spacing: 2px; }
+      .fp-mech-text { font-size: 9px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
       .fp-title-text { font-size: 28px; fill: #09405e; font-weight: 700; }
       .fp-title-accent { font-size: 28px; fill: #f7941d; font-weight: 700; }
       .fp-plumbing-dot { fill: #7BA3C9; }
-      .fp-legend-text { font-size: 9.5px; fill: #6B6B6B; font-family: 'Helvetica', 'Arial', sans-serif; }
-      .fp-legend-label { font-size: 10px; fill: #09405e; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 600; }
+      .fp-legend-text { font-size: 9.5px; fill: #6B6B6B; font-family: Helvetica, Arial, sans-serif; }
+      .fp-legend-label { font-size: 10px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; }
     </style>
     <marker id="fp-arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
       <polygon points="0 0, 8 3, 0 6" fill="#09405e"/>
@@ -1145,24 +1151,24 @@
   <rect width="1200" height="1060" fill="#FAFAF5"/>
 
   <!-- Title -->
-  <text x="600" y="45" text-anchor="middle">
-    <tspan class="fp-title-text">Collective </tspan><tspan class="fp-title-accent">85</tspan><tspan class="fp-title-text" style="font-size: 20px;">  Floor Plan</tspan>
-  </text>
+  <text x="410" y="45" text-anchor="end" style="font-size: 28px; fill: #09405e; font-weight: 700; font-family: 'Georgia', 'Times New Roman', serif;">Collective</text>
+  <text x="418" y="45" text-anchor="start" style="font-size: 28px; fill: #f7941d; font-weight: 700; font-family: 'Georgia', 'Times New Roman', serif;">85</text>
+  <text x="460" y="45" text-anchor="start" style="font-size: 20px; fill: #09405e; font-weight: 700; font-family: 'Georgia', 'Times New Roman', serif;">Floor Plan</text>
 
   <!-- 85TH STREET -->
   <rect x="100" y="75" width="1000" height="65" rx="4" fill="#D5D0C8"/>
   <line x1="130" y1="107" x2="1070" y2="107" stroke="#F0EDE4" stroke-width="2" stroke-dasharray="20,12"/>
   <rect x="100" y="71" width="1000" height="5" rx="2" fill="#C4BBA8"/>
   <rect x="100" y="138" width="1000" height="5" rx="2" fill="#C4BBA8"/>
-  <text x="600" y="103" text-anchor="middle" style="font-size: 14px; fill: #7A7568; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 700; letter-spacing: 4px;">85TH STREET</text>
-  <text x="600" y="118" text-anchor="middle" style="font-size: 8px; fill: #8A8578; font-family: 'Helvetica', sans-serif; letter-spacing: 1px;">35,000+ CARS DAILY</text>
-  <text x="200" y="96" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: 'Helvetica', sans-serif;">&#x2192;</text>
-  <text x="350" y="96" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: 'Helvetica', sans-serif;">&#x2192;</text>
-  <text x="850" y="130" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: 'Helvetica', sans-serif;">&#x2190;</text>
-  <text x="1000" y="130" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: 'Helvetica', sans-serif;">&#x2190;</text>
+  <text x="600" y="103" text-anchor="middle" style="font-size: 14px; fill: #7A7568; font-family: Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 4px;">85TH STREET</text>
+  <text x="600" y="118" text-anchor="middle" style="font-size: 8px; fill: #8A8578; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1px;">35,000+ CARS DAILY</text>
+  <text x="200" y="96" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: Helvetica, Arial, sans-serif;">&#x2192;</text>
+  <text x="350" y="96" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: Helvetica, Arial, sans-serif;">&#x2192;</text>
+  <text x="850" y="130" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: Helvetica, Arial, sans-serif;">&#x2190;</text>
+  <text x="1000" y="130" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: Helvetica, Arial, sans-serif;">&#x2190;</text>
 
   <!-- NORTH ENTRANCE -->
-  <text x="435" y="155" text-anchor="middle" style="font-size: 10px; fill: #09405e; font-family: 'Helvetica', sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
+  <text x="435" y="155" text-anchor="middle" style="font-size: 10px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
   <line x1="435" y1="162" x2="435" y2="190" stroke="#09405e" stroke-width="1.5" marker-end="url(#fp-arrowhead)"/>
 
   <!-- Building border -->
@@ -1227,12 +1233,12 @@
   <!-- Bathroom 1 -->
   <rect x="465" y="552" width="90" height="105" rx="5" class="fp-room-bathroom"/>
   <text x="510" y="600" text-anchor="middle" class="fp-bathroom-text">&#x1F6BA;</text>
-  <text x="510" y="616" text-anchor="middle" style="font-size: 8px; fill: #8B8B8B; font-family: 'Helvetica', sans-serif;">Restroom</text>
+  <text x="510" y="616" text-anchor="middle" style="font-size: 8px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif;">Restroom</text>
 
   <!-- Bathroom 2 -->
   <rect x="560" y="552" width="90" height="105" rx="5" class="fp-room-bathroom"/>
   <text x="605" y="600" text-anchor="middle" class="fp-bathroom-text">&#x1F6B9;</text>
-  <text x="605" y="616" text-anchor="middle" style="font-size: 8px; fill: #8B8B8B; font-family: 'Helvetica', sans-serif;">Restroom</text>
+  <text x="605" y="616" text-anchor="middle" style="font-size: 8px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif;">Restroom</text>
 
   <!-- Unit 103 -->
   <rect x="220" y="700" width="240" height="116" rx="5" class="fp-room-rented"/>
@@ -1267,22 +1273,22 @@
 
   <!-- SOUTH ENTRANCE -->
   <line x1="707" y1="845" x2="707" y2="825" stroke="#09405e" stroke-width="1.5" marker-end="url(#fp-arrowhead)"/>
-  <text x="707" y="858" text-anchor="middle" style="font-size: 10px; fill: #09405e; font-family: 'Helvetica', sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
+  <text x="707" y="858" text-anchor="middle" style="font-size: 10px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
 
   <!-- PARKING LOT -->
   <rect x="160" y="870" width="880" height="70" rx="8" fill="#E4E0D8" stroke="#C4BBA8" stroke-width="1"/>
-  <text x="600" y="905" text-anchor="middle" style="font-size: 13px; fill: #7A7568; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: 700; letter-spacing: 3px;">&#x1F17F;&#xFE0F;  ON-SITE PARKING</text>
-  <text x="600" y="922" text-anchor="middle" style="font-size: 9px; fill: #A09888; font-family: 'Helvetica', sans-serif; letter-spacing: 1px;">AMPLE PARKING FOR TENANTS &amp; CLIENTS</text>
+  <text x="600" y="905" text-anchor="middle" style="font-size: 13px; fill: #7A7568; font-family: Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3px;">&#x1F17F;&#xFE0F;  ON-SITE PARKING</text>
+  <text x="600" y="922" text-anchor="middle" style="font-size: 9px; fill: #A09888; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1px;">AMPLE PARKING FOR TENANTS &amp; CLIENTS</text>
 
   <!-- COMPASS -->
   <g transform="translate(1060, 230)">
     <circle cx="0" cy="0" r="32" fill="none" stroke="#C4BBA8" stroke-width="1.5"/>
-    <text x="0" y="-40" text-anchor="middle" style="font-size: 14px; fill: #09405e; font-family: 'Helvetica', sans-serif; font-weight: 700;">N</text>
+    <text x="0" y="-40" text-anchor="middle" style="font-size: 14px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 700;">N</text>
     <line x1="0" y1="-26" x2="0" y2="-10" stroke="#09405e" stroke-width="2"/>
     <polygon points="0,-26 -5,-14 5,-14" fill="#09405e"/>
-    <text x="0" y="26" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: 'Helvetica', sans-serif;">S</text>
-    <text x="26" y="5" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: 'Helvetica', sans-serif;">E</text>
-    <text x="-26" y="5" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: 'Helvetica', sans-serif;">W</text>
+    <text x="0" y="26" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: Helvetica, Arial, sans-serif;">S</text>
+    <text x="26" y="5" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: Helvetica, Arial, sans-serif;">E</text>
+    <text x="-26" y="5" text-anchor="middle" style="font-size: 10px; fill: #A0A0A0; font-family: Helvetica, Arial, sans-serif;">W</text>
   </g>
 
   <!-- LEGEND -->
