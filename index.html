@@ -369,7 +369,7 @@
     width: 100%;
     aspect-ratio: 4/5;
     border-radius: 24px;
-    background: url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=800&q=80') center/cover no-repeat;
+    background: url('images/hero-hallway.jpg') center/cover no-repeat;
     object-fit: cover;
   }
 
@@ -570,11 +570,12 @@
 
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 260px 260px;
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 280px;
+    gap: 12px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   .gallery-item {
@@ -600,6 +601,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: transform 0.5s ease;
   }
 
@@ -625,8 +627,7 @@
   .gp-5 { background: linear-gradient(135deg, #8ba58e, #d4c9b0); }
   .gp-6 { background: linear-gradient(135deg, #d4c9b0, #b5c0b7); }
 
-  .gallery-item:nth-child(1) { grid-column: span 2; }
-  .gallery-item:nth-child(4) { grid-column: span 2; }
+  .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
 
   /* ===== FEATURES ===== */
   .features {
@@ -969,11 +970,10 @@
 
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
+      grid-auto-rows: 200px;
     }
 
-    .gallery-item:nth-child(1),
-    .gallery-item:nth-child(4) { grid-column: span 1; }
+    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
 
     .fp-building {
       grid-template-columns: 1fr 1fr;
@@ -1136,18 +1136,18 @@
       .fp-room-bathroom { fill: #E8E4DC; stroke: #B0A898; stroke-width: 1.2; }
       .fp-room-hallway { fill: #F5F3EE; stroke: #C4BBA8; stroke-width: 1; }
       .fp-room-mech { fill: #F2E8C9; stroke: #B8A870; stroke-width: 1.5; }
-      .fp-unit-label { font-size: 10px; fill: #006666; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1.5px; font-weight: 600; }
-      .fp-biz-name { font-size: 13px; fill: #09405e; font-weight: 700; }
-      .fp-biz-name-sm { font-size: 11.5px; fill: #09405e; font-weight: 700; }
-      .fp-room-size { font-size: 8.5px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
-      .fp-available-text { font-size: 13px; fill: #D4850E; font-weight: 700; font-style: italic; }
-      .fp-available-sub { font-size: 8px; fill: #B0A090; font-family: Helvetica, Arial, sans-serif; letter-spacing: 0.5px; }
-      .fp-bathroom-text { font-size: 10px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
-      .fp-hallway-text { font-size: 10px; fill: #A0A0A0; font-family: Helvetica, Arial, sans-serif; letter-spacing: 2px; }
-      .fp-mech-text { font-size: 9px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
+      .fp-unit-label { font-size: 13px; fill: #006666; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1.5px; font-weight: 600; }
+      .fp-biz-name { font-size: 16px; fill: #09405e; font-weight: 700; }
+      .fp-biz-name-sm { font-size: 14px; fill: #09405e; font-weight: 700; }
+      .fp-room-size { font-size: 11px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
+      .fp-available-text { font-size: 16px; fill: #D4850E; font-weight: 700; font-style: italic; }
+      .fp-available-sub { font-size: 10px; fill: #B0A090; font-family: Helvetica, Arial, sans-serif; letter-spacing: 0.5px; }
+      .fp-bathroom-text { font-size: 12px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
+      .fp-hallway-text { font-size: 13px; fill: #A0A0A0; font-family: Helvetica, Arial, sans-serif; letter-spacing: 2px; }
+      .fp-mech-text { font-size: 11px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif; }
       .fp-plumbing-dot { fill: #7BA3C9; }
-      .fp-legend-text { font-size: 9.5px; fill: #6B6B6B; font-family: Helvetica, Arial, sans-serif; }
-      .fp-legend-label { font-size: 10px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; }
+      .fp-legend-text { font-size: 12px; fill: #6B6B6B; font-family: Helvetica, Arial, sans-serif; }
+      .fp-legend-label { font-size: 13px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; }
     </style>
     <marker id="fp-arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
       <polygon points="0 0, 8 3, 0 6" fill="#09405e"/>
@@ -1162,15 +1162,15 @@
   <line x1="130" y1="107" x2="1070" y2="107" stroke="#F0EDE4" stroke-width="2" stroke-dasharray="20,12"/>
   <rect x="100" y="71" width="1000" height="5" rx="2" fill="#C4BBA8"/>
   <rect x="100" y="138" width="1000" height="5" rx="2" fill="#C4BBA8"/>
-  <text x="600" y="103" text-anchor="middle" style="font-size: 14px; fill: #7A7568; font-family: Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 4px;">85TH STREET</text>
-  <text x="600" y="118" text-anchor="middle" style="font-size: 8px; fill: #8A8578; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1px;">35,000+ CARS DAILY</text>
+  <text x="600" y="103" text-anchor="middle" style="font-size: 16px; fill: #7A7568; font-family: Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 4px;">85TH STREET</text>
+  <text x="600" y="118" text-anchor="middle" style="font-size: 10px; fill: #8A8578; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1px;">35,000+ CARS DAILY</text>
   <text x="200" y="96" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: Helvetica, Arial, sans-serif;">&#x2192;</text>
   <text x="350" y="96" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: Helvetica, Arial, sans-serif;">&#x2192;</text>
   <text x="850" y="130" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: Helvetica, Arial, sans-serif;">&#x2190;</text>
   <text x="1000" y="130" text-anchor="middle" style="font-size: 10px; fill: #A09888; font-family: Helvetica, Arial, sans-serif;">&#x2190;</text>
 
   <!-- NORTH ENTRANCE -->
-  <text x="435" y="155" text-anchor="middle" style="font-size: 10px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
+  <text x="435" y="155" text-anchor="middle" style="font-size: 12px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
   <line x1="435" y1="162" x2="435" y2="190" stroke="#09405e" stroke-width="1.5" marker-end="url(#fp-arrowhead)"/>
 
   <!-- Building border -->
@@ -1183,7 +1183,7 @@
   <!-- Unit 107 -->
   <rect x="220" y="200" width="185" height="120" rx="5" class="fp-room-rented"/>
   <circle cx="393" cy="212" r="3.5" class="fp-plumbing-dot" opacity="0.6"/>
-  <text x="312" y="228" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 107</text>
+  <text x="312" y="228" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 107</text>
   <text x="312" y="250" text-anchor="middle" class="fp-biz-name-sm">Pure Sugar</text>
   <text x="312" y="265" text-anchor="middle" class="fp-biz-name-sm">Aesthetics</text>
   <text x="312" y="310" text-anchor="middle" class="fp-room-size">117 SF</text>
@@ -1191,7 +1191,7 @@
   <!-- Unit 106 -->
   <rect x="220" y="325" width="185" height="120" rx="5" class="fp-room-available"/>
   <circle cx="393" cy="337" r="3.5" class="fp-plumbing-dot" opacity="0.6"/>
-  <text x="312" y="360" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 106</text>
+  <text x="312" y="360" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 106</text>
   <text x="312" y="382" text-anchor="middle" class="fp-available-text">Available</text>
   <text x="312" y="396" text-anchor="middle" class="fp-available-sub">INQUIRE FOR DETAILS</text>
   <text x="312" y="435" text-anchor="middle" class="fp-room-size">115 SF</text>
@@ -1199,7 +1199,7 @@
   <!-- Unit 105 -->
   <rect x="220" y="450" width="185" height="120" rx="5" class="fp-room-available"/>
   <circle cx="393" cy="462" r="3.5" class="fp-plumbing-dot" opacity="0.6"/>
-  <text x="312" y="485" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 105</text>
+  <text x="312" y="485" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 105</text>
   <text x="312" y="507" text-anchor="middle" class="fp-available-text">Available</text>
   <text x="312" y="521" text-anchor="middle" class="fp-available-sub">INQUIRE FOR DETAILS</text>
   <text x="312" y="560" text-anchor="middle" class="fp-room-size">115 SF</text>
@@ -1207,19 +1207,19 @@
   <!-- Unit 104 -->
   <rect x="220" y="575" width="185" height="120" rx="5" class="fp-room-available"/>
   <circle cx="393" cy="587" r="3.5" class="fp-plumbing-dot" opacity="0.6"/>
-  <text x="312" y="610" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 104</text>
+  <text x="312" y="610" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 104</text>
   <text x="312" y="632" text-anchor="middle" class="fp-available-text">Available</text>
   <text x="312" y="646" text-anchor="middle" class="fp-available-sub">INQUIRE FOR DETAILS</text>
   <text x="312" y="685" text-anchor="middle" class="fp-room-size">115 SF</text>
 
   <!-- Laundry Room -->
   <rect x="465" y="200" width="185" height="84" rx="5" class="fp-room-mech"/>
-  <text x="557" y="240" text-anchor="middle" class="fp-mech-text" style="font-size: 12px; font-weight: 600;">&#x1F9FA;  Laundry Room</text>
+  <text x="557" y="240" text-anchor="middle" class="fp-mech-text" style="font-size: 14px; font-weight: 600;">&#x1F9FA;  Laundry Room</text>
 
   <!-- Unit 108 -->
   <rect x="465" y="290" width="185" height="125" rx="5" class="fp-room-rented"/>
   <circle cx="638" cy="302" r="3.5" class="fp-plumbing-dot" opacity="0.6"/>
-  <text x="557" y="320" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 108</text>
+  <text x="557" y="320" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 108</text>
   <text x="557" y="342" text-anchor="middle" class="fp-biz-name-sm">Xinya Beauty</text>
   <text x="557" y="357" text-anchor="middle" class="fp-biz-name-sm">Boutique</text>
   <text x="557" y="405" text-anchor="middle" class="fp-room-size">115 SF</text>
@@ -1227,7 +1227,7 @@
   <!-- Unit 109 -->
   <rect x="465" y="421" width="185" height="125" rx="5" class="fp-room-available"/>
   <circle cx="638" cy="433" r="3.5" class="fp-plumbing-dot" opacity="0.6"/>
-  <text x="557" y="458" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 109</text>
+  <text x="557" y="458" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 109</text>
   <text x="557" y="480" text-anchor="middle" class="fp-available-text">Available</text>
   <text x="557" y="494" text-anchor="middle" class="fp-available-sub">INQUIRE FOR DETAILS</text>
   <text x="557" y="536" text-anchor="middle" class="fp-room-size">115 SF</text>
@@ -1235,52 +1235,52 @@
   <!-- Bathroom 1 -->
   <rect x="465" y="552" width="90" height="105" rx="5" class="fp-room-bathroom"/>
   <text x="510" y="600" text-anchor="middle" class="fp-bathroom-text">&#x1F6BA;</text>
-  <text x="510" y="616" text-anchor="middle" style="font-size: 8px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif;">Restroom</text>
+  <text x="510" y="616" text-anchor="middle" style="font-size: 10px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif;">Restroom</text>
 
   <!-- Bathroom 2 -->
   <rect x="560" y="552" width="90" height="105" rx="5" class="fp-room-bathroom"/>
   <text x="605" y="600" text-anchor="middle" class="fp-bathroom-text">&#x1F6B9;</text>
-  <text x="605" y="616" text-anchor="middle" style="font-size: 8px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif;">Restroom</text>
+  <text x="605" y="616" text-anchor="middle" style="font-size: 10px; fill: #8B8B8B; font-family: Helvetica, Arial, sans-serif;">Restroom</text>
 
   <!-- Unit 103 -->
   <rect x="220" y="700" width="240" height="116" rx="5" class="fp-room-rented"/>
   <circle cx="448" cy="712" r="3.5" class="fp-plumbing-dot" opacity="0.6"/>
-  <text x="340" y="730" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 103</text>
+  <text x="340" y="730" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 103</text>
   <text x="340" y="755" text-anchor="middle" class="fp-biz-name-sm">Kissed by Color Salon</text>
   <text x="340" y="805" text-anchor="middle" class="fp-room-size">150 SF</text>
 
   <!-- Unit 102 -->
   <rect x="465" y="700" width="185" height="116" rx="5" class="fp-room-available"/>
   <circle cx="638" cy="712" r="3.5" class="fp-plumbing-dot" opacity="0.6"/>
-  <text x="557" y="733" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 102</text>
+  <text x="557" y="733" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 102</text>
   <text x="557" y="755" text-anchor="middle" class="fp-available-text">Available</text>
   <text x="557" y="769" text-anchor="middle" class="fp-available-sub">INQUIRE FOR DETAILS</text>
   <text x="557" y="805" text-anchor="middle" class="fp-room-size">112.5 SF</text>
 
   <!-- Unit 110 -->
   <rect x="655" y="200" width="325" height="453" rx="6" class="fp-room-rented"/>
-  <text x="817" y="280" text-anchor="middle" class="fp-unit-label" style="font-size: 14px;">SUITE 110</text>
-  <text x="817" y="330" text-anchor="middle" style="font-size: 20px; fill: #09405e; font-weight: 700;">World in a Dish</text>
-  <text x="817" y="355" text-anchor="middle" style="font-size: 12px; fill: #09405e; font-style: italic;">Community Kitchen</text>
+  <text x="817" y="280" text-anchor="middle" class="fp-unit-label" style="font-size: 17px;">SUITE 110</text>
+  <text x="817" y="330" text-anchor="middle" style="font-size: 24px; fill: #09405e; font-weight: 700;">World in a Dish</text>
+  <text x="817" y="355" text-anchor="middle" style="font-size: 15px; fill: #09405e; font-style: italic;">Community Kitchen</text>
   <text x="817" y="445" text-anchor="middle" style="font-size: 36px; opacity: 0.1;">&#x1F37D;&#xFE0F;</text>
   <text x="817" y="635" text-anchor="middle" class="fp-room-size">670 SF</text>
 
   <!-- Unit 101 -->
-  <rect x="765" y="661" width="215" height="155" rx="5" class="fp-room-available"/>
-  <text x="872" y="700" text-anchor="middle" class="fp-unit-label" style="font-size: 12px;">SUITE 101</text>
+  <rect x="765" y="661" width="215" height="155" rx="5" class="fp-room-rented"/>
+  <text x="872" y="700" text-anchor="middle" class="fp-unit-label" style="font-size: 15px;">SUITE 101</text>
   <text x="872" y="724" text-anchor="middle" class="fp-biz-name">The Think Tank</text>
-  <text x="872" y="740" text-anchor="middle" style="font-size: 10px; fill: #09405e; font-style: italic;">Shared Office Space</text>
-  <text x="872" y="762" text-anchor="middle" class="fp-available-text">Available</text>
+  <text x="872" y="740" text-anchor="middle" style="font-size: 13px; fill: #09405e; font-style: italic;">Shared Office Space</text>
+  <text x="872" y="758" text-anchor="middle" style="font-size: 13px; fill: #09405e; font-style: italic;">by World in a Dish</text>
   <text x="872" y="800" text-anchor="middle" class="fp-room-size">157 SF</text>
 
   <!-- SOUTH ENTRANCE -->
   <line x1="707" y1="845" x2="707" y2="825" stroke="#09405e" stroke-width="1.5" marker-end="url(#fp-arrowhead)"/>
-  <text x="707" y="858" text-anchor="middle" style="font-size: 10px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
+  <text x="707" y="858" text-anchor="middle" style="font-size: 12px; fill: #09405e; font-family: Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 2px;">ENTRANCE</text>
 
   <!-- PARKING LOT -->
   <rect x="160" y="870" width="880" height="70" rx="8" fill="#E4E0D8" stroke="#C4BBA8" stroke-width="1"/>
-  <text x="600" y="905" text-anchor="middle" style="font-size: 13px; fill: #7A7568; font-family: Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3px;">&#x1F17F;&#xFE0F;  ON-SITE PARKING</text>
-  <text x="600" y="922" text-anchor="middle" style="font-size: 9px; fill: #A09888; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1px;">AMPLE PARKING FOR TENANTS &amp; CLIENTS</text>
+  <text x="600" y="905" text-anchor="middle" style="font-size: 15px; fill: #7A7568; font-family: Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3px;">&#x1F17F;&#xFE0F;  ON-SITE PARKING</text>
+  <text x="600" y="922" text-anchor="middle" style="font-size: 11px; fill: #A09888; font-family: Helvetica, Arial, sans-serif; letter-spacing: 1px;">AMPLE PARKING FOR TENANTS &amp; CLIENTS</text>
 
   <!-- COMPASS -->
   <g transform="translate(1060, 230)">
@@ -1372,33 +1372,33 @@
     <p class="section-label">Take a Look</p>
     <h2 class="section-title">Inside Collective 85</h2>
   </div>
-  <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; padding: 0 20px; max-width: 1200px; margin: 0 auto;">
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/front-forward.jpg" alt="Collective 85 building exterior with signage" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="images/front-forward.jpg" alt="Collective 85 building exterior with signage" loading="lazy">
     </div>
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/hallway-1.jpg" alt="Interior hallway with artwork and hardwood floors" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+    <div class="gallery-item">
+      <img src="images/hallway-1.jpg" alt="Interior hallway with artwork and hardwood floors" loading="lazy">
     </div>
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/unit-104-106.jpg" alt="Available private salon suite with window and AC" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+    <div class="gallery-item">
+      <img src="images/unit-104-106.jpg" alt="Available private salon suite with window and AC" loading="lazy">
     </div>
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/hallway-from-back-entry.jpg" alt="Back entrance with natural light and high ceilings" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+    <div class="gallery-item">
+      <img src="images/hallway-from-back-entry.jpg" alt="Back entrance with natural light and high ceilings" loading="lazy">
     </div>
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/unit-102.jpg" alt="Private suite with window and individual climate control" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+    <div class="gallery-item">
+      <img src="images/unit-102.jpg" alt="Private suite with window and individual climate control" loading="lazy">
     </div>
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/hallway-2.jpg" alt="Hallway with art and frosted glass suite doors" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+    <div class="gallery-item">
+      <img src="images/hallway-2.jpg" alt="Hallway with art and frosted glass suite doors" loading="lazy">
     </div>
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/front-parking.jpg" alt="Front parking and street view on NE 85th St" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+    <div class="gallery-item">
+      <img src="images/front-parking.jpg" alt="Front parking and street view on NE 85th St" loading="lazy">
     </div>
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/laundry-room.jpg" alt="Shared laundry room with washer and dryer" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+    <div class="gallery-item">
+      <img src="images/laundry-room.jpg" alt="Shared laundry room with washer and dryer" loading="lazy">
     </div>
-    <div class="gallery-item" style="overflow: hidden; border-radius: 12px; aspect-ratio: 4/3;">
-      <img src="images/back-parking-1.jpg" alt="Rear parking area for tenants and clients" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+    <div class="gallery-item">
+      <img src="images/back-parking-1.jpg" alt="Rear parking area for tenants and clients" loading="lazy">
     </div>
   </div>
 </section>
