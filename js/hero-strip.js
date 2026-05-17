@@ -88,10 +88,13 @@
     document.body.style.overflow = 'hidden';
 
     var img = overlay.querySelector('.lightbox-img');
+    show(current);
 
     function show(i) {
       current = (i + FEATURED.length) % FEATURED.length;
       img.src = 'images/' + FEATURED[current];
+      var thumb = document.querySelector('.hero-strip-thumb[data-index="' + current + '"] img');
+      img.alt = thumb ? thumb.alt.replace(' thumbnail', '') : 'Featured photo';
     }
 
     function close() {
