@@ -1056,6 +1056,121 @@
     .hero-buttons { flex-direction: column; align-items: flex-start; }
     .hero-title { font-size: 2.2rem; }
   }
+
+  /* ===== HERO STRIP (rotating featured photo controls) ===== */
+  .hero-strip {
+    display: flex;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+    align-items: stretch;
+  }
+  .hero-strip-thumb {
+    flex: 1 1 0;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.55;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    border-bottom: 3px solid transparent;
+  }
+  .hero-strip-thumb:hover { opacity: 1; transform: translateY(-2px); }
+  .hero-strip-thumb.active {
+    opacity: 1;
+    border-bottom-color: #D4850E;
+  }
+  .hero-strip-thumb img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+
+  /* ===== LIGHTBOX MODAL ===== */
+  .lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: lb-fade-in 0.2s ease;
+  }
+  @keyframes lb-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 20px;
+    object-fit: contain;
+    display: block;
+  }
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+    font-family: -apple-system, sans-serif;
+    line-height: 1;
+  }
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .lightbox-close {
+    top: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+  }
+  .lightbox-prev,
+  .lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    font-size: 36px;
+  }
+  .lightbox-prev { left: 24px; }
+  .lightbox-next { right: 24px; }
+
+  /* Mobile: scrollable strip */
+  @media (max-width: 640px) {
+    .hero-strip {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0 20px 30px;
+      gap: 8px;
+    }
+    .hero-strip-thumb {
+      flex: 0 0 90px;
+      scroll-snap-align: center;
+    }
+    .hero-strip-thumb img { height: 60px; }
+    .lightbox-prev,
+    .lightbox-next {
+      width: 44px;
+      height: 44px;
+      font-size: 28px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1098,6 +1213,24 @@
         <div class="accent-label">Individual Suites Under One Roof</div>
       </div>
     </div>
+  </div>
+
+  <div class="hero-strip" aria-label="Featured photos">
+    <button type="button" class="hero-strip-thumb active" data-index="0" aria-label="View exterior front">
+      <img src="images/exterior-front-1.jpg" alt="Exterior front thumbnail" loading="lazy">
+    </button>
+    <button type="button" class="hero-strip-thumb" data-index="1" aria-label="View exterior rear">
+      <img src="images/exterior-rear-1.jpg" alt="Exterior rear thumbnail" loading="lazy">
+    </button>
+    <button type="button" class="hero-strip-thumb" data-index="2" aria-label="View foyer">
+      <img src="images/foyer.jpg" alt="Foyer thumbnail" loading="lazy">
+    </button>
+    <button type="button" class="hero-strip-thumb" data-index="3" aria-label="View kitchen">
+      <img src="images/kitchen-1.jpg" alt="Kitchen thumbnail" loading="lazy">
+    </button>
+    <button type="button" class="hero-strip-thumb" data-index="4" aria-label="View salon suite">
+      <img src="images/suite-1.jpg" alt="Salon suite thumbnail" loading="lazy">
+    </button>
   </div>
 </section>
 
@@ -1652,5 +1785,6 @@
     observer.observe(el);
   });
 </script>
+  <script src="js/hero-strip.js"></script>
 </body>
 </html>
