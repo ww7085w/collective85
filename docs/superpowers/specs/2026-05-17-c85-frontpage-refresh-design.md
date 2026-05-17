@@ -89,10 +89,9 @@ Once renamed, the 21 photos map to placements as follows:
 
 | Placement | Photo(s) | Reasoning |
 |---|---|---|
-| Hero CSS background (the `.hero` section bg) | `exterior-front-1.jpg` | Best front-of-building shot, instant identifier |
-| About section background (`.about-image` div) | `kitchen-1.jpg` | Per Xue 2026-05-17: kitchen photo replaces current `hero-entry.jpg` ref |
-| New hero-adjacent strip — featured rotation (5 slots, cycles in order) | `exterior-front-1.jpg`, `exterior-rear-1.jpg`, `foyer.jpg`, `kitchen-1.jpg`, `suite-1.jpg` | One of each category — gives variety in the rotation |
-| New hero-adjacent strip — thumbnail row (5 slots, same 5 photos) | Same 5 as above | Thumbnails are the rotation controls |
+| Hero right-side image slot (`.hero-image`) — rotates between 5 photos | `exterior-front-1.jpg`, `exterior-rear-1.jpg`, `foyer.jpg`, `kitchen-1.jpg`, `suite-1.jpg` | One of each category — gives variety in the rotation. (The `.hero` section itself keeps its existing cream gradient — no photo bg on the section.) |
+| New hero-adjacent strip thumbnails (5 slots) | Same 5 as above | Thumbnails mirror the rotation set and are its controls |
+| About section background (`.about-image` div) | `kitchen-1.jpg` | Per Xue 2026-05-17: kitchen photo replaces current `hero-entry.jpg` ref. (Same photo used in both hero rotation AND about bg — visitors may see it twice; acceptable for content coverage.) |
 | Lower "Inside Collective 85" gallery (existing section, 9 slots in current grid) | `exterior-front-2.jpg`, `exterior-front-3.jpg`, `exterior-rear-2.jpg`, `exterior-rear-3.jpg`, `suite-2.jpg`, `suite-3.jpg`, `powder-room-1.jpg`, `kitchen-2.jpg`, `laundry-room.jpg` | Different photos from the featured strip — no duplication |
 | Archived (not referenced) | `exterior-front-4..7.jpg`, `exterior-rear-4..5.jpg`, `powder-room-2.jpg` | 7 unused photos kept available for future swap-ins |
 
@@ -228,8 +227,9 @@ A reviewer testing the implementation on `collective85.com` should confirm:
 
 - [ ] All 21 new pro photos load (no broken images, no console errors)
 - [ ] No reference to old filenames anywhere in `index.html`
-- [ ] Hero CSS background is now `exterior-front-1.jpg`
 - [ ] About section background is now `kitchen-1.jpg`
+- [ ] Hero `.hero-image` slot rotates through the 5 featured photos starting with `exterior-front-1.jpg`
+- [ ] `.hero` section's cream gradient backdrop is unchanged
 - [ ] New strip appears immediately below the hero buttons, no section heading above it
 - [ ] Strip has 5 thumbnails, each ~80×60px desktop / horizontally-scrollable on mobile ≤640px
 - [ ] Featured photo rotates every 5 seconds when idle
