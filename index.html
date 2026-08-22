@@ -1186,6 +1186,7 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#availability">Availability</a></li>
     <li><a href="#testimonials">Reviews</a></li>
     <li><a href="tel:14256508879" class="nav-phone">📞 Call or Text: 1-425-650-8879</a></li>
     <li><a href="https://excellagroup.rentvine.com/portals/resident/" target="_blank" rel="noopener">Tenant Login</a></li>
@@ -1620,6 +1621,19 @@
 </section>
 
 <!-- BOOKING / CONTACT -->
+<!-- AVAILABILITY (Rentvine live listings widget) -->
+<section id="availability" style="padding: 80px 40px; background: var(--cream-light);">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <p class="section-label">Available Now</p>
+    <h2 class="section-title">Open Suites</h2>
+    <p class="section-desc" style="margin-bottom: 32px;">Suites are listed here as they become available. Don't see what you need? Call or text
+      <a href="tel:14256508879" style="color: var(--forest); font-weight: 600;">1-425-650-8879</a> — we'll tell you what's opening and show you the space.</p>
+    <div>
+      <div class="rentvine_widget" data-subdomain="excellagroup" data-component="listings"></div>
+    </div>
+  </div>
+</section>
+
 <section class="booking" id="booking">
   <div class="booking-inner">
     <p class="section-label">Ready to Visit?</p>
@@ -1791,5 +1805,16 @@
   <script src="js/hero-strip.js"></script>
   <!-- GoHighLevel / LeadConnector chat widget (Collective 85 / Suite85 LLC) — A2P SMS opt-in -->
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a1cbdf71ce15bb9e9fce263" data-source="WEB_USER"></script>
+  <!-- Rentvine listings widget loader (populates #availability) -->
+  <script type="text/javascript">
+  (function(d,s,id){
+    if (d.getElementById(id)) return;
+    var t = (new Date()).getTime();
+    var js = d.createElement(s);
+    js.id = id;
+    js.src = "https://app.rentvine.com/public/widget/init.js?_=" + t;
+    d.body.appendChild(js);
+  }(document, 'script', 'rv-jsinit'));
+  </script>
 </body>
 </html>
